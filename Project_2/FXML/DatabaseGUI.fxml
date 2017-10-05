@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="1000.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="47.0" prefWidth="416.0" spacing="10.0">
+         <children>
+            <ComboBox fx:id="combo" prefHeight="45.0" prefWidth="129.0" promptText="Searh for..." HBox.hgrow="ALWAYS" />
+            <TextField fx:id="tf_search" prefHeight="45.0" prefWidth="357.0" style="-fx-font-size: 18;" />
+            <Button fx:id="btn_search" mnemonicParsing="false" prefHeight="45.0" prefWidth="77.0" text="Search" />
+         </children>
+      </HBox>
+      <StackPane>
+         <children>
+            <TableView fx:id="table_books" prefHeight="510.0" prefWidth="357.0" tableMenuButtonVisible="true">
+              <columns>
+                  <TableColumn prefWidth="99.0" text="Hard/Digital" />
+                <TableColumn prefWidth="149.0" text="ISBN" />
+                  <TableColumn prefWidth="427.0" text="Title" />
+                  <TableColumn prefWidth="120.0" text="Author(s)" />
+                <TableColumn prefWidth="74.0" text="Qty" />
+                  <TableColumn prefWidth="110.0" text="Cost" />
+              </columns>
+            </TableView>
+            <TableView fx:id="table_movies" prefHeight="510.0" prefWidth="357.0" tableMenuButtonVisible="true" visible="false" StackPane.alignment="CENTER">
+               <columns>
+                  <TableColumn fx:id="col_movie_hardDig" prefWidth="111.0" text="Hard/Digital" />
+                  <TableColumn fx:id="col_movie_title" prefWidth="628.0" text="Title" />
+                  <TableColumn fx:id="col_movie_year" prefWidth="101.0" text="Year" />
+                  <TableColumn fx:id="col_movie_qty" minWidth="0.0" prefWidth="70.0" text="Qty" />
+                  <TableColumn fx:id="col_movie_cost" prefWidth="57.0" text="Cost" />
+               </columns>
+            </TableView>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

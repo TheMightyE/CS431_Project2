@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="479.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emad.CS431.Project1.CustomerController">
+   <children>
+      <TableView fx:id="table_customer" prefHeight="479.0" prefWidth="753.0" VBox.vgrow="ALWAYS">
+        <columns>
+          <TableColumn fx:id="col_id" prefWidth="87.0" text="Member ID" />
+            <TableColumn fx:id="col_name" prefWidth="154.0" text="Name" />
+          <TableColumn fx:id="col_item" prefWidth="307.0" text="Item" />
+            <TableColumn fx:id="col_type" prefWidth="108.0" text="Type" />
+            <TableColumn fx:id="col_phone" prefWidth="115.0" text="Phone Number" />
+        </columns>
+      </TableView>
+   </children>
+</VBox>
