@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="621.0" prefWidth="1113.0" spacing="5.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emad.CS431.Project1.GUIController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="47.0" prefWidth="416.0" spacing="5.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ComboBox fx:id="combo" prefHeight="45.0" prefWidth="182.0" promptText="Searh for..." HBox.hgrow="ALWAYS" />
+            <StackPane>
+               <children>
+                  <VBox fx:id="book_search_fields" alignment="CENTER" spacing="10.0" StackPane.alignment="CENTER">
+                     <children>
+                        <HBox alignment="CENTER" spacing="5.0">
+                           <children>
+                              <Label style="-fx-font-size: 20;" text="ISBN" />
+                              <TextField fx:id="tf_book_isbn" prefHeight="45.0" prefWidth="179.0" style="-fx-font-size: 18;" />
+                              <Label style="-fx-font-size: 20;" text="Title" />
+                              <TextField fx:id="tf_book_title" prefHeight="45.0" prefWidth="261.0" style="-fx-font-size: 18;" />
+                              <Label style="-fx-font-size: 20;" text="Author" />
+                              <TextField fx:id="tf_book_author" prefHeight="45.0" prefWidth="198.0" style="-fx-font-size: 18;" />
+                              <Button fx:id="btn_search" mnemonicParsing="false" prefHeight="45.0" prefWidth="77.0" text="Search" />
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Label style="-fx-font-size: 20;" text="Cost Between" />
+                              <TextField fx:id="tf_book_cost_low" prefHeight="45.0" prefWidth="179.0" promptText="Low" style="-fx-font-size: 18;" />
+                              <TextField fx:id="tf_book_cost_high" prefHeight="45.0" prefWidth="179.0" promptText="High" style="-fx-font-size: 18;" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox fx:id="movie_search_fields" alignment="CENTER" spacing="5.0" visible="false">
+                     <children>
+                        <Label style="-fx-font-size: 20;" text="Title" />
+                        <TextField fx:id="tf_movie_title" prefHeight="45.0" prefWidth="261.0" style="-fx-font-size: 18;" />
+                        <Label style="-fx-font-size: 20;" text="Year" />
+                        <TextField fx:id="tf_movie_year" prefHeight="45.0" prefWidth="198.0" style="-fx-font-size: 18;" />
+                        <Button fx:id="btn_search1" mnemonicParsing="false" prefHeight="45.0" prefWidth="77.0" text="Search" />
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox_search_all" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" visible="false">
+                     <children>
+                        <Label style="-fx-font-size: 20;" text="Title" />
+                        <TextField fx:id="tf_search_all" prefHeight="45.0" prefWidth="261.0" style="-fx-font-size: 18;" />
+                     </children>
+                  </HBox>
+               </children>
+            </StackPane>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
+      <StackPane>
+         <children>
+            <TableView fx:id="table_books" prefHeight="510.0" prefWidth="357.0" StackPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="col_book_isbn" prefWidth="161.0" text="ISBN" />
+                  <TableColumn fx:id="col_book_hardDig" prefWidth="113.0" text="Hard/Digital" />
+                  <TableColumn fx:id="col_book_title" prefWidth="525.0" text="Title" />
+                  <TableColumn fx:id="col_book_auth" prefWidth="126.0" text="Author(s)" />
+                <TableColumn fx:id="col_book_qty" prefWidth="73.0" text="Qty" />
+                  <TableColumn fx:id="col_book_cost" prefWidth="94.0" text="Cost" />
+              </columns>
+            </TableView>
+            <TableView fx:id="table_movies" prefHeight="510.0" prefWidth="357.0" visible="false">
+               <columns>
+                  <TableColumn fx:id="col_movie_hardDig" prefWidth="127.0" text="Hard/Digital" />
+                  <TableColumn fx:id="col_movie_title" prefWidth="634.0" text="Title" />
+                  <TableColumn fx:id="col_movie_year" prefWidth="99.0" text="Year" />
+                  <TableColumn fx:id="col_movie_qty" minWidth="0.0" prefWidth="82.0" text="Qty" />
+                  <TableColumn fx:id="col_movie_cost" prefWidth="91.0" text="Cost" />
+               </columns>
+            </TableView>
+            <TableView fx:id="table_all" prefHeight="200.0" prefWidth="200.0" visible="false">
+              <columns>
+                <TableColumn fx:id="col_all_type" prefWidth="123.0" text="Digital/Hard" />
+                <TableColumn fx:id="col_all_title" minWidth="0.0" prefWidth="789.0" text="Title" />
+                  <TableColumn fx:id="col_all_qty" minWidth="0.0" prefWidth="95.0" text="Quantity" />
+                  <TableColumn fx:id="col_all_cost" minWidth="0.0" prefWidth="95.0" text="Cost" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>
